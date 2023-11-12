@@ -1,0 +1,6 @@
+<div>
+  <button nz-button nzType="primary" (click)="pretty()">格式化</button>
+  <button nz-button nzType="primary" (click)="minify()">压缩</button>
+
+  <nz-code-editor class="editor" [(ngModel)]="code" [nzEditorOption]="{ language: 'json' , }"></nz-code-editor>
+</div>

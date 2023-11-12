@@ -1,0 +1,7 @@
+<div>
+
+  <nz-input-number [(ngModel)]="count" [nzMin]="1" [nzMax]="100" [nzStep]="1"></nz-input-number>
+  <button nz-button nzType="primary" (click)="genUuids()">生成</button>
+
+  <textarea class="code" [rows]="count + 1" nz-input [(ngModel)]="uuids"></textarea>
+</div>

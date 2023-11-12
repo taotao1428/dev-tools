@@ -14,6 +14,14 @@ import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 
+import * as AllIcons from '@ant-design/icons-angular/icons';
+import {NzIconModule} from "ng-zorro-antd/icon";
+import { IconDefinition } from '@ant-design/icons-angular';
+
+const antDesignIcons = AllIcons as {
+  [key: string]: IconDefinition;
+};
+const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesignIcons[key])
 registerLocaleData(zh);
 
 @NgModule({
@@ -28,7 +36,8 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    NzIconModule.forRoot(icons)
   ],
   providers: [
     { provide: NZ_I18N, useValue: zh_CN }

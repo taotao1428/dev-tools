@@ -1,0 +1,9 @@
+<div>
+
+  <p>字符串:</p>
+  <textarea class="code" rows="5" nz-input [(ngModel)]="input"></textarea>
+  <button nz-button nzType="primary" (click)="encode()"><span nz-icon nzType="arrow-down" nzTheme="outline"></span>编码</button>
+  <button nz-button nzType="primary" (click)="decode()"><span nz-icon nzType="arrow-up" nzTheme="outline"></span>解码</button>
+  <p>Base64编码后字符串:</p>
+  <textarea class="code" rows="5" nz-input [(ngModel)]="base64Input"></textarea>
+</div>
